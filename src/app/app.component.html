@@ -1,6 +1,27 @@
 <!-- app.component.html -->
-<header>Mi portfolio</header>
+<header class="main-header">
+    <h1 class="logo">Mi portfolio</h1>
 
-<router-outlet></router-outlet>
+    <nav class="main-nav">
+        <a routerLink="/about" routerLinkActive="ective" [routerLinkActiveOptions]="{ exact: true }">
+            Sobre mí
+        </a>
+        <a routerLink="/work" routerLinkActive="ective">
+            Proyectos
+        </a>
+        <a routerLink="/formation" routerLinkActive="ective">
+            Formación
+        </a>
+        <a routerLink="/contact" routerLinkActive="ective">
+            Contacto
+        </a>
+    </nav>
+</header>
 
-<footer>2025</footer>
+<main class="page-content">
+    <router-outlet></router-outlet>
+</main>
+
+<footer class="main-footer">
+    © 2025 - Mi portfolio
+</footer>

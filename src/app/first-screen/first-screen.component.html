@@ -1,16 +1,24 @@
-<p>FIRST SCREEN FUNCIONA</p>
-
 <div *ngIf="showQuestion" class="question-overlay">
+    <div class="question-backdrop"></div>
+
     <div class="question-card">
         <h2>¿Quién eres?</h2>
-        <p>Nos ayuda a entender quién visita este portfolio 😊</p>
+        <p class="subtitle">
+            Esta información solo es para ayudarme a conocer quién visita este portfolio. 😀
+        </p>
 
-        <button (click)="onAnswer('recruiter')">
-            Soy recruiter / técnico de selección
-        </button>
+        <div class="buttons">
+            <button type="button" class="btn primary" (click)="onAnswer('recruiter')">
+                Soy recruiter / técnico de selección
+            </button>
 
-        <button (click)="onAnswer('visitor')">
-            Soy otra persona curioseando
-        </button>
+            <button type="button" class="btn secondary" (click)="onAnswer('visitor')">
+                Soy otra persona curioseando
+            </button>
+        </div>
+
+        <p class="small-note">
+            No se guarda ningún dato personal, solo el tipo de visitante.
+        </p>
     </div>
 </div>

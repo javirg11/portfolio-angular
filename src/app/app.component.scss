@@ -1,0 +1,32 @@
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo {
+    margin: 0;
+}
+
+.main-nav a {
+    margin-left: 1rem;
+    text-decoration: none;
+}
+
+.main-nav a.active {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.page-content {
+    padding: 2rem;
+}
+
+.main-footer {
+    text-align: center;
+    padding: 1rem;
+    border-top: 1px solid #ddd;
+    margin-top: 2rem;
+}

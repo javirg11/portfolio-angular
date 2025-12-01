@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AnalyticsService } from '../services/analytics.service';
 
 type VisitorType = 'recruiter' | 'visitor';
@@ -14,7 +15,7 @@ type VisitorType = 'recruiter' | 'visitor';
 export class FirstScreenComponent implements OnInit {
   showQuestion = false;
 
-  constructor(private analytics: AnalyticsService) {
+  constructor(private analytics: AnalyticsService, private router: Router) {
     console.log('FirstScreenComponent constructor'); // 👈 para ver si se crea
   }
 
@@ -29,5 +30,6 @@ export class FirstScreenComponent implements OnInit {
     this.showQuestion = false;
 
     await this.analytics.registerVisit(type);
+    this.router.navigate(['/work']);
   }
 }
